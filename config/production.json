@@ -1,0 +1,3 @@
+{
+    "db":"mongodb://localhost/finance-village-db"
+}
