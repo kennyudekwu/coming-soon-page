@@ -27,3 +27,23 @@ var x = setInterval(function() {
     document.getElementById("counter").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
+
+// Subscribe function with event listener
+const formValue = document.querySelector('button');
+
+function subscribe(){
+  let users = document.getElementById("myForm").elements[0].value;
+
+  fetch('localhost:3000/api/subscribe', {
+    method: "POST",
+    body: JSON.stringify(users),
+    headers: {"Content-type": "application/json; charset=UTF-8"}
+  })
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
+}
+
+formValue.addEventListener('click', subscribe);
