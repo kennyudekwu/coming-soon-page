@@ -31,19 +31,66 @@ var x = setInterval(function() {
 
 
 // Subscribe function with event listener
-const formValue = document.querySelector('button');
+// const formValue = document.getElementById("myForm");
 
-function subscribe(){
-  let users = document.getElementById("myForm").elements[0].value;
+// async function subscribe(event){
+//   event.preventDefault();
 
-  fetch('localhost:3000/api/subscribe', {
+//   let users = document.getElementById("myForm").elements[0].value;
+
+//   fetch('localhost:3000/api/subscribe', {
+//     method: "POST",
+//     body: JSON.stringify(users),
+//     headers: {"Content-type": "application/json; charset=UTF-8"}
+//   })
+//     .then(response => response.json())
+//     .then(json => console.log(json))
+//     .catch(err => console.log(err));
+// }
+
+// formValue.addEventListener('submit', subscribe);
+
+
+
+async function postFormDataAsJson({url, formData}) {
+  const plainFormData = Object.fromEntries(formData.entries());
+  const formDataJsonString = JSON.stringify(plainFormData);
+
+  const fetchOptions = {
     method: "POST",
-    body: JSON.stringify(users),
-    headers: {"Content-type": "application/json; charset=UTF-8"}
-  })
-    .then(response => response.json())
-    .then(json => console.log(json))
-    .catch(err => console.log(err));
+    headers: {
+			"Content-Type": "application/json",
+			"Accept": "application/json"
+		},
+    body: formDataJsonString,
+  };
+
+  const response = await fetch(url, fetchOptions);
+
+  if(!response.ok){
+    const errorMessage = await response.text();
+    throw new Error(errorMessage);
+  }
+
+  return response.json();
 }
 
-formValue.addEventListener('click', subscribe);
+async function subscribe(event){
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const url = form.action;
+
+  try{
+    const formData = new FormData(form);
+
+    const responseData = await postFormDataAsJson({ url, formData });
+
+    console.log({responseData});
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+const formValue = document.getElementById("myForm");
+formValue.addEventListener('submit', subscribe);
