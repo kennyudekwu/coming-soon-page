@@ -13,7 +13,8 @@ app.use(express.json()); // to be able to parse req json object to endpoint
 if(app.get('env') === 'development') app.use(morgan('tiny'));
 
 // Connecting to db...
-const db = config.get('db');
+// const db = config.get('db');
+const db = "mongodb+srv://rabbitcloud:%23Jaguar123@boostbevycluster0.cdtcj.mongodb.net/finance-village-db?retryWrites=true&w=majority";
     mongoose.connect(db, {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -41,14 +42,14 @@ winston.add(new winston.transports.MongoDB({
 
 
 const port = process.env.PORT || 3000;
-console.log(port)
+
 app.listen(port, () => winston.info(`Listening on port ${port}...`));
 
 // app.get('/home', (req, res)=>{
 //     res.sendFile(path.join(__dirname+'/index.html'));
 // });
 
-app.post('/api/subscribe', async (req, res) => { // add auth and admin middleware
+app.post('/api/subscribe', async (req, res) => {
     const {error} = validateSubscriber(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
