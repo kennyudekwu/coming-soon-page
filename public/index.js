@@ -68,9 +68,12 @@ async function postFormDataAsJson({url, formData}) {
   const response = await fetch(url, fetchOptions);
 
   if(!response.ok){
+    // pop up a modal stating the reason for the error to the user based on the server's response(s)
     const errorMessage = await response.text();
     throw new Error(errorMessage);
   }
+
+  // only display the "email sent" modal only if the server responds with a 200 success status code
 
   return response.json();
 }
