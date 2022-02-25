@@ -49,14 +49,6 @@ async function postFormDataAsJson({url, formData}) {
     // pop up a modal stating the reason for the error to the user based on the server's response(s)
     const errorMessage = await response.text();
     throw new Error(errorMessage);
-
-  }else{
-    $('#myForm').on('submit', function(e){
-      $('#exampleModal').modal('show');
-      e.preventDefault();
-    });
-    
-    console.log("success")
   }
 
   // only display the "email sent" modal only if the server responds with a 200 success status code
@@ -74,15 +66,15 @@ async function subscribe(event){
     const formData = new FormData(form);
 
     const responseData = await postFormDataAsJson({ url, formData });
+    $('#exampleModal').modal('show');
 
-    console.log({responseData});
-
+    // console.log({responseData});
   } catch (error) {
-    console.error(error);
+    // console.error(error);
 
       let formError = document.getElementById("formError");
       formError.innerHTML = error;
-  
+
       formError.style.backgroundColor = "rgb(255, 91, 91)";
       formError.style.color = "white";
       formError.style.borderRadius = "10px";
