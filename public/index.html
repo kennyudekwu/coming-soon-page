@@ -40,7 +40,8 @@
             <form action="http://localhost:3000/api/subscribe" method="post" id="myForm">
                 <img src="./Images/inputMailicon.svg" alt="" class="mailIcon">
                 <input type="email" name="email" placeholder="Enter your email" value="">
-                <button type="submit" class="submitBtn" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                <button type="submit" class="submitBtn" id="btnForm">Submit</button>
+                <center><div id="formError"></div></center>
             </form>
         </div>
         <div class="col-12 col-md-6 bottom">

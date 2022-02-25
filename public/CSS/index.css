@@ -17,6 +17,10 @@ h1{
     font-size: 38px !important;
 }
 
+#formError{
+    margin-top: 1rem;
+}
+
 .notify{
     padding-top: 2rem;
     font-size: 16px;
@@ -79,7 +83,7 @@ input:focus {
 
 footer{
     margin-top: 20rem !important;
-    padding-top: 3rem;
+    padding-top: 10rem;
     padding-bottom: 3rem;
 }
 
@@ -117,7 +121,7 @@ small{
     }
 
     footer{
-        padding-top: 8rem;
+        padding-top: 15rem;
 
     }
 }
@@ -126,6 +130,10 @@ small{
     html{
         text-align: left;
         word-spacing: 0;
+    }
+
+    #formError{
+        float: left;
     }
 
     #counter{
@@ -139,6 +147,7 @@ small{
 
     footer{
         margin-top: -5rem !important;
+        padding-top: 3rem;
     }
 
     input{
@@ -157,7 +166,6 @@ small{
         margin-left: -10px !important;
     }
 }
-
 
 @media only screen and (min-width: 1024px) {
     html{
