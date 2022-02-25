@@ -66,23 +66,27 @@ async function subscribe(event){
     const formData = new FormData(form);
 
     const responseData = await postFormDataAsJson({ url, formData });
-    $('#exampleModal').modal('show');
-
+  
+    let modalConfirm = $('#exampleModal').modal('show');
+    if(modalConfirm){
+      let formError = document.getElementById("formError");
+      formError.style.display = "none";
+    }
+  
     // console.log({responseData});
   } catch (error) {
     // console.error(error);
+    
+        let formError = document.getElementById("formError");
+        formError.innerHTML = error;
 
-      let formError = document.getElementById("formError");
-      formError.innerHTML = error;
-
-      formError.style.backgroundColor = "rgb(255, 91, 91)";
-      formError.style.color = "white";
-      formError.style.borderRadius = "10px";
-      formError.style.width = "80%";
-      formError.style.padding = "20px 2.5rem 20px 2.5rem"
+        formError.style.backgroundColor = "rgb(255, 91, 91)";
+        formError.style.color = "white";
+        formError.style.borderRadius = "10px";
+        formError.style.width = "80%";
+        formError.style.padding = "20px 2.5rem 20px 2.5rem";
   }
 }
 
 const formValue = document.getElementById("myForm");
 formValue.addEventListener('submit', subscribe);
-
