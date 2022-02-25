@@ -67,10 +67,10 @@ async function subscribe(event){
 
     const responseData = await postFormDataAsJson({ url, formData });
   
-    let modalConfirm = $('#exampleModal').modal('show');
-    if(modalConfirm){
-      let formError = document.getElementById("formError");
-      formError.style.display = "none";
+    let modal =  $('#exampleModal').modal('show');
+    if(modal){
+          let formError = document.getElementById("formError");
+          formError.style.display = "none";
     }
   
     // console.log({responseData});
@@ -78,13 +78,25 @@ async function subscribe(event){
     // console.error(error);
     
         let formError = document.getElementById("formError");
-        formError.innerHTML = error;
+        formError.innerText = error;
 
-        formError.style.backgroundColor = "rgb(255, 91, 91)";
-        formError.style.color = "white";
-        formError.style.borderRadius = "10px";
-        formError.style.width = "80%";
-        formError.style.padding = "20px 2.5rem 20px 2.5rem";
+        // formError.style.backgroundColor = "rgb(255, 91, 91)";
+        formError.style.color = "rgb(255, 91, 91)";
+        formError.style.fontWeight = "700"; 
+        // formError.style.borderRadius = "10px";
+        // formError.style.width = "80%";
+        // formError.style.paddingLeft = "2.5rem";
+        // formError.style.paddingRight = "2.5rem";
+
+        var fade_out = function() {
+          $("#formError").fadeOut().empty();
+        }
+        setTimeout(fade_out, 5000);
+
+        var fadein = function() {
+          $("#formError").fadeIn().empty();
+        }
+        setTimeout(fadein, 5000);
   }
 }
 
