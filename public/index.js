@@ -87,14 +87,6 @@ async function subscribe(event){
         }
         setTimeout(fadeOut, 2500);
 
-
-        // formError.style.backgroundColor = "rgb(255, 91, 91)";
-
-        // formError.style.borderRadius = "10px";
-        // formError.style.width = "80%";
-        // formError.style.paddingLeft = "2.5rem";
-        // formError.style.paddingRight = "2.5rem";
-
         function fadeOut() {
           formError.innerText = "";
           $("#formError").fadeOut();
