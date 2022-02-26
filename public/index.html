@@ -21,7 +21,7 @@
                 <h5>Email submitted succesfully</h5>
                 <p>You will now receive emails from finance village on a weekly basis.</p>
                 <p style="color: #F58220; font-weight: 500;">Click on any of the icons below to follow us on any of our social media.</p>
-                <button type="button" class="btn btnContinue" data-bs-dismiss="modal" id="modalBtn">Continue</button>
+                <button type="button" class="btn btnContinue" data-bs-dismiss="modal" id="modalBtn" onclick="document.getElementById('email_field').value = ''">Continue</button>
             </center>
         </div>
       </div>
@@ -40,7 +40,7 @@
             <p class="notify">Get notified when we launch</p>
             <form action="http://localhost:3000/api/subscribe" method="post" id="myForm">
                 <img src="./Images/inputMailicon.svg" alt="" class="mailIcon">
-                <input type="email" name="email" placeholder="Enter your email" value="">
+                <input type="email" name="email" id="email_field" placeholder="Enter your email" value="">
                 <button type="submit" class="submitBtn" id="btnForm">Submit</button>
                 <center><div id="formError"></div></center>
             </form>

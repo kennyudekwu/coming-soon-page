@@ -66,37 +66,48 @@ async function subscribe(event){
     const formData = new FormData(form);
 
     const responseData = await postFormDataAsJson({ url, formData });
-  
+
     let modal =  $('#exampleModal').modal('show');
     if(modal){
           let formError = document.getElementById("formError");
           formError.style.display = "none";
     }
-  
+
     // console.log({responseData});
   } catch (error) {
-    // console.error(error);
-    
+    console.log(error);
         let formError = document.getElementById("formError");
-        formError.innerText = error;
+        if (formError.innerText == "") {
+          // console.log("I'm inside the if block...");
+          // console.log(formError.innerText);
+          formError.innerText = error;
+          formError.style.color = "rgb(255, 91, 91)";
+          formError.style.fontWeight = "700";
+          fadeIn();
+        }
+        setTimeout(fadeOut, 2500);
+
 
         // formError.style.backgroundColor = "rgb(255, 91, 91)";
-        formError.style.color = "rgb(255, 91, 91)";
-        formError.style.fontWeight = "700"; 
+
         // formError.style.borderRadius = "10px";
         // formError.style.width = "80%";
         // formError.style.paddingLeft = "2.5rem";
         // formError.style.paddingRight = "2.5rem";
 
-        var fade_out = function() {
-          $("#formError").fadeOut().empty();
+        function fadeOut() {
+          formError.innerText = "";
+          $("#formError").fadeOut();
         }
-        setTimeout(fade_out, 5000);
 
-        var fadein = function() {
-          $("#formError").fadeIn().empty();
+
+        function fadeIn() {
+          console.log("Fading In now...")
+          $("#formError").fadeIn();
         }
-        setTimeout(fadein, 5000);
+        // setTimeout(fadein, 5000);
+
+        // console.log('Innertext: ', formError.innerText);
   }
 }
 

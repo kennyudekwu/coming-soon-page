@@ -13,8 +13,8 @@ app.use(express.json()); // to be able to parse req json object to endpoint
 if(app.get('env') === 'development') app.use(morgan('tiny'));
 
 // Connecting to db...
-// const db = config.get('db');
-const db = "mongodb+srv://rabbitcloud:%23Jaguar123@boostbevycluster0.cdtcj.mongodb.net/finance-village-db?retryWrites=true&w=majority";
+const db = config.get('db');
+
     mongoose.connect(db, {
         useNewUrlParser: true,
         useUnifiedTopology: true
