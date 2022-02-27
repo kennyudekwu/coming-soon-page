@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const winston = require('winston');
 const config = require('config');
 const morgan = require('morgan');
-const sslRedirect = require('heroku-ssl-redirect');
+const sslRedirect = require('heroku-ssl-redirect').default;
 require('winston-mongodb');
 
 app.use(sslRedirect()); // enable ssl redirect
