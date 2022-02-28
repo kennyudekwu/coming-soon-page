@@ -75,7 +75,7 @@ async function subscribe(event){
 
     // console.log({responseData});
   } catch (error) {
-    console.log(error);
+    // console.log(error);
         let formError = document.getElementById("formError");
         if (formError.innerText == "") {
           // console.log("I'm inside the if block...");
@@ -94,7 +94,7 @@ async function subscribe(event){
 
 
         function fadeIn() {
-          console.log("Fading In now...")
+          // console.log("Fading In now...")
           $("#formError").fadeIn();
         }
         // setTimeout(fadein, 5000);
