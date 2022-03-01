@@ -6,6 +6,7 @@ html{
     text-align: center;
     font-family: 'euclid_circular_bregular'; 
     word-spacing: 3px;  
+    overflow: hidden;
 }
 
 h1, h5, .notify{
@@ -14,7 +15,7 @@ h1, h5, .notify{
 }
 
 h1{
-    font-size: 38px !important;
+    font-size: 30px !important;
 }
 
 #formError{
@@ -22,7 +23,7 @@ h1{
 }
 
 .notify{
-    padding-top: 2rem;
+    padding-top: 5px;
     font-size: 16px;
 }
 
@@ -34,7 +35,7 @@ h1{
     color: #F58220;
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     word-spacing: 3px;
     font-family: 'euclid_circular_bmedium'; 
 }
@@ -70,7 +71,7 @@ input:focus {
 }
 
 .piggyBank{
-    height: 250px;
+    height: 200px;
     max-width: 100vw;
 }
 
@@ -87,9 +88,8 @@ input:focus {
 }
 
 footer{
-    margin-top: 20rem !important;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
+    margin-top: 20rem;
+    padding-bottom: 1rem;
 }
 
 small{
@@ -100,7 +100,7 @@ small{
 
 .col-12.top{
     position: absolute;
-    margin-top: 10rem;
+    margin-top: 38rem;
     padding-bottom: 10rem;
 }
 
@@ -123,11 +123,6 @@ small{
         height: 50px;
         width: 70px;
         margin-left: -10px !important;
-    }
-
-    footer{
-        padding-top: 15rem;
-
     }
 }
 
@@ -169,7 +164,8 @@ small{
     }
 
     footer{
-        margin-top: -5rem !important;
+        position: unset !important;
+        margin-top: -6rem !important;
         padding-top: 3rem;
     }
 }
@@ -223,31 +219,25 @@ small{
         width: 92px;
         margin-left: -10px !important;
     }
+
+    footer{
+        margin-top: -4rem !important;
+        padding-top: 3rem;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-    /* .row{
-        margin-top: 0rem !important;
-    }
-
-    h1{
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem !important;
-        font-size: 50px !important;
-    } */
-
     .col-12.top{
         padding-top: 7rem;
     }
 
     footer{
-        margin-top: -5rem !important;
+        margin-top: -7rem !important;
         padding-top: 3rem;
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1030;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
     }
 }
-
