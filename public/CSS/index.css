@@ -87,9 +87,14 @@ input:focus {
     font-size: 12px;
 }
 
+.row{
+    margin-top: -1rem !important;
+}
+
 footer{
-    margin-top: 20rem;
-    padding-bottom: 1rem;
+    position: absolute;
+    top: 36rem;
+    padding-bottom: .5rem;
 }
 
 small{
@@ -100,7 +105,7 @@ small{
 
 .col-12.top{
     position: absolute;
-    margin-top: 38rem;
+    margin-top: 36rem;
     padding-bottom: 10rem;
 }
 
@@ -123,6 +128,28 @@ small{
         height: 50px;
         width: 70px;
         margin-left: -10px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-height: 720px) {
+    .row{
+        margin-top: 3rem !important;
+    }
+
+    footer{
+        position: fixed !important;
+        top: 41rem;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-height: 800px) {
+    .row{
+        margin-top: 5rem !important;
+    }
+
+    footer{
+        position: fixed !important;
+        top: 48rem;
     }
 }
 
