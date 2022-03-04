@@ -89,7 +89,7 @@ async function subscribe(event){
 
         function fadeOut() {
           formError.innerText = "";
-          console.log("Fading out...")
+          // console.log("Fading out...")
           $("#formError").fadeOut();
         }
 
