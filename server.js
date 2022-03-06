@@ -5,10 +5,14 @@ const mongoose = require('mongoose');
 const winston = require('winston');
 const config = require('config');
 const morgan = require('morgan');
-app.use(express.static("public"));
+const sslRedirect = require('heroku-ssl-redirect').default;
 require('winston-mongodb');
 
+app.use(sslRedirect()); // enable ssl redirect
+
 app.use(express.json()); // to be able to parse req json object to endpoint
+
+app.use(express.static("public")); // handling static files
 
 if(app.get('env') === 'development') app.use(morgan('tiny'));
 
