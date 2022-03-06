@@ -93,7 +93,7 @@ input:focus {
 }
 
 footer{
-    /* position: absolute !important; */
+    position: absolute !important;
     top: 3rem !important;
     padding-bottom: .5rem !important;
 }
