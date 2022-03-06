@@ -93,8 +93,8 @@ input:focus {
 }
 
 footer{
-    position: absolute !important;
-    top: 36rem !important;
+    /* position: absolute !important; */
+    top: 3rem !important;
     padding-bottom: .5rem !important;
 }
 
@@ -106,7 +106,7 @@ small{
 
 .col-12.top{
     position: absolute !important;
-    margin-top: 6rem !important;
+    margin-top: 36rem !important;
     padding-bottom: 10rem !important;
 }
 
