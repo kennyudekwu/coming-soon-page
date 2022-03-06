@@ -89,7 +89,6 @@ input:focus {
 
 .row{
     margin-top: -1rem !important;
-    display: flex !important;
 }
 
 footer{
@@ -211,6 +210,7 @@ small{
 
     .col-12.top{
         padding-top: 5rem !important;
+        position: unset !important;
         margin-top: 0rem !important;
     }
 
@@ -260,7 +260,7 @@ small{
     }
 
     footer{
-        margin-top: -4rem !important;
+        margin-top: -7rem !important;
         padding-top: 3rem;
         position: fixed !important;
         right: 0;
@@ -276,6 +276,6 @@ small{
     }
 
     footer{
-        margin-top: -1rem !important;
+        margin-top: -6rem !important;
     }
 }
