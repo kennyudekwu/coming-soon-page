@@ -290,6 +290,6 @@ small{
 { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
     .col-12.top{
         position: absolute;
-        margin-top: 13rem;
+        margin-top: 13.5rem;
     }
 }}
