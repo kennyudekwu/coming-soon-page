@@ -105,7 +105,7 @@ small{
 
 .col-12.top{
     position: absolute;
-    margin-top: 30rem;
+    margin-top: 28rem;
     padding-bottom: 1rem;
     /* -webkit-margin-before: 30rem; */
 }
@@ -139,7 +139,7 @@ small{
 
     footer{
         position: fixed !important;
-        margin-top: 29rem !important;
+        margin-top: 27.5rem !important;
     }
 }
 
@@ -290,6 +290,6 @@ small{
 { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
     .col-12.top{
         position: absolute;
-        margin-top: 15rem;
+        margin-top: 13rem;
     }
 }}
