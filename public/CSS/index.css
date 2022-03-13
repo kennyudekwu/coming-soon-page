@@ -139,7 +139,7 @@ small{
 
     footer{
         position: fixed !important;
-        margin-top: 30rem !important;
+        margin-top: 29rem !important;
     }
 }
 
@@ -149,10 +149,16 @@ small{
     }
 
     footer{
-        position: fixed !important;
-        margin-top: 30rem !important;
+        margin-top: 33rem !important;
     }
 }
+
+@media only screen and (max-width: 500px) and (min-height: 1000px) {
+    footer{
+        margin-top: 40rem !important;
+    }
+}
+
 
 @media only screen and (min-width: 768px) {
     html{
