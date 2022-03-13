@@ -6,7 +6,7 @@ html{
     text-align: center;
     font-family: 'euclid_circular_bregular'; 
     word-spacing: 3px;  
-    overflow: hidden !important;
+    overflow: hidden;
 }
 
 h1, h5, .notify{
@@ -89,13 +89,12 @@ input:focus {
 
 .row{
     margin-top: -1rem !important;
-    display: flex !important;
 }
 
 footer{
-    position: absolute !important;
-    top: 3rem !important;
-    padding-bottom: .5rem !important;
+    position: absolute;
+    margin-top: 52rem !important;
+    padding-bottom: .5rem;
 }
 
 small{
@@ -105,9 +104,9 @@ small{
 }
 
 .col-12.top{
-    position: absolute !important;
-    margin-top: 36rem !important;
-    padding-bottom: 10rem !important;
+    position: absolute;
+    margin-top: 20rem;
+    padding-bottom: 1rem;
 }
 
 .successGif{
@@ -132,25 +131,25 @@ small{
     }
 }
 
-@media only screen and (max-width: 600px) and (min-height: 720px) {
+@media only screen and (max-width: 500px) and (min-height: 600px) {
     .row{
-        margin-top: 3rem !important;
+        margin-top: -1.5rem !important;
     }
 
     footer{
         position: fixed !important;
-        top: 41rem !important;
+        margin-top: 28rem !important;
     }
 }
 
-@media only screen and (max-width: 600px) and (min-height: 800px) {
+@media only screen and (max-width: 500px) and (min-height: 800px) {
     .row{
         margin-top: 5rem !important;
     }
 
     footer{
         position: fixed !important;
-        top: 48rem !important;
+        margin-top: 33rem !important;
     }
 }
 
@@ -194,15 +193,14 @@ small{
     footer{
         position: unset !important;
         margin-top: -6rem !important;
-        padding-top: 3rem !important;
+        padding-top: 3rem;
     }
 }
 
 @media only screen and (min-width: 1024px) {
     html{
         word-spacing: 3px;
-        overflow-y: hidden !important;
-        overflow-x: unset !important;
+        overflow-y: hidden;
     }
 
     .row{
@@ -210,7 +208,8 @@ small{
     }
 
     .col-12.top{
-        padding-top: 5rem !important;
+        padding-top: 5rem;
+        position: unset !important;
         margin-top: 0rem !important;
     }
 
@@ -249,20 +248,20 @@ small{
     }
 
     footer{
-        margin-top: -4rem !important;
-        padding-top: 3rem !important;
+        margin-top: -5rem !important;
+        padding-top: 3rem;
     }
 }
 
 @media only screen and (min-width: 1100px) {
     .col-12.top{
-        padding-top: 7rem !important;
+        padding-top: 7rem;
     }
 
     footer{
-        margin-top: -4rem !important;
+        margin-top: -7rem !important;
         padding-top: 3rem;
-        position: fixed !important;
+        position: fixed;
         right: 0;
         bottom: 0;
         left: 0;
@@ -276,6 +275,6 @@ small{
     }
 
     footer{
-        margin-top: -1rem !important;
+        margin-top: -6rem !important;
     }
 }
