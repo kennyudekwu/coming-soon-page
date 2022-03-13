@@ -105,9 +105,9 @@ small{
 
 .col-12.top{
     position: absolute;
-    /* margin-top: 30rem; */
+    margin-top: 30rem;
     padding-bottom: 1rem;
-    -webkit-margin-before: 30rem;
+    /* -webkit-margin-before: 30rem; */
 }
 
 .successGif{
@@ -279,3 +279,11 @@ small{
         margin-top: -6rem !important;
     }
 }
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .col-12.top{
+        position: absolute;
+        margin-top: 15rem;
+    }
+}}
