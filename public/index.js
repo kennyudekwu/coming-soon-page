@@ -24,7 +24,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("counter").innerHTML = "EXPIRED";
+    document.getElementById("counter").innerHTML = "Hang on to your hats!";
   }
 }, 1000);
 
